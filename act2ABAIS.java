@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 class act2ABAIS
 {
+	
 	public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
