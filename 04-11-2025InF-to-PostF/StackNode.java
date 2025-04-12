@@ -3,6 +3,8 @@ NAME: Aldrie U. Abais
 DESCRIPTION: StackNode
 DATA: 03/28/2025
 *******************************************************************************/
+import java.util.Scanner;
+import javax.swing.*;
 
 class StackNode
 {
@@ -106,44 +108,48 @@ class StackNode
       return result;
     }
 
-	// public static void main(String[] args) {
-	//     StackNode SN = new StackNode();
-	//     Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {
+	    StackNode SN = new StackNode();
+	    Scanner in = new Scanner(System.in);
 		
-	// 	boolean Anchor1 = false;
-    //     boolean checker = false;
-    //     int choice = 0;
-	// 	while(!Anchor1){
-	// 	    do{
-    // 	        try{
-	// 	    System.out.println("\n====================\n");
-	// 	    System.out.println("====MyStackArray====\n");
-    // 		System.out.println(" Menu:\n");
-    // 		System.out.println("1.Create\n");
-    // 		System.out.println("2.Exit\n");
+		boolean Anchor1 = false;
+        boolean checker = false;
+        int choice = 0;
+		while(!Anchor1){
+		    do{
+    	        try{
+		    System.out.println("\n====================\n");
+		    System.out.println("====Infix to Postfix Converter====\n");
+    		System.out.println(" Menu:\n");
+    		System.out.println("1.Input Infix Expression: \n");
+    		System.out.println("2.Exit\n");
 		    
-    // 	            checker = false;
-    // 	            System.out.print("Choose(1-2): ");
-    // 		        choice = in.nextInt();
-    // 	        }catch(Exception e){
-    //         		checker = true;   	
-    //     		    System.out.println("Enter 1-2 only!");
-    //         		in.next();
-    // 	        }
-    // 	    }while(checker);
+    	            checker = false;
+    	            System.out.print("Choose(1-2): ");
+    		        choice = in.nextInt();
+    	        }catch(Exception e){
+            		checker = true;   	
+        		    System.out.println("Enter 1-2 only!");
+            		in.next();
+    	        }
+    	    }while(checker);
 		    
     		
-    // 		if(choice == 1)
-    // 		{
-    // 		    // Create(in);
-    // 		}
-    // 		else if(choice == 2){
-    // 		    Anchor1 = true;
-    // 		}else{
-    // 		    System.out.println("Enter 1-2 only!");
-    // 		}
-	// 	};
-	// }
+    		if(choice == 1)
+    		{
+                Main main = new Main();
+                String infixExpression = JOptionPane.showInputDialog("Enter content: ");
+    		    String result = main.convertToPostfix(infixExpression);
+                JOptionPane.showMessageDialog(null, "The Postfix of the given Infix Expression is: "+result, "Dequeue result.", JOptionPane.PLAIN_MESSAGE);
+                // System.out.println("The Postfix of the given Infix Expression is: "+result);
+    		}
+    		else if(choice == 2){
+    		    Anchor1 = true;
+    		}else{
+    		    System.out.println("Enter 1-2 only!");
+    		}
+		};
+	}
 	
 	// public static void Create(Scanner in){
 	    
